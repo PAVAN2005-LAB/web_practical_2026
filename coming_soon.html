@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress | Pavan Yadav</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            background: #eee;
+            border-radius: 20px;
+            height: 15px;
+            width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: #d35400;
+            width: 65%;
+            /* Adjust based on your progress */
+            height: 100%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            background: #003366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon">🚧</div>
+        <h2>STILL LEARNING</h2>
+        <p>I am currently applying <strong>JavaScript DOM</strong> and <strong>CSS Design Principles</strong> to this
+            page.</p>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p style="font-size: 0.8rem; color: #777;">Debugging in progress for CO-2 fulfillment.</p>
+        <a href="index.html" class="btn">Go Back</a>
+    </div>
+</body>
+
+</html>
