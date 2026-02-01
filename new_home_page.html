@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming Dashboard | Pavan Kumar Yadav</title>
+    <style>
+        :root {
+            --sidebar-blue: #002b5c;
+            --accent: #d35400;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: var(--light-bg);
+        }
+
+        /* Sidebar with Scrollable Navigation */
+        aside {
+            width: 320px;
+            background-color: var(--sidebar-blue);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 10px;
+        }
+
+        nav {
+            overflow-y: auto;
+            /* Enables scrolling for the 16 links */
+            flex-grow: 1;
+            padding-right: 5px;
+        }
+
+        nav::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        nav::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 8px;
+        }
+
+        nav a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: block;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .co-tag {
+            float: right;
+            font-size: 0.7rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            color: var(--sidebar-blue);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #eee;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f1f1;
+            color: var(--sidebar-blue);
+        }
+
+        .tick {
+            color: #27ae60;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside>
+        <div class="profile-card">
+            <img src="pavan.jpg" alt="Pavan Yadav">
+            <h3 style="margin:5px 0;">Pavan Kumar Yadav</h3>
+            <p style="font-size:0.8rem; opacity:0.7;">230180107045 | Web Programming</p>
+        </div>
+
+        <nav>
+            <p style="color:var(--accent); font-weight:bold; font-size:0.7rem; text-transform:uppercase;">Experiments
+                (1-16)</p>
+            <ul>
+                <li><a href="exp1.html">1. Semantic Resume <span class="co-tag">CO1</span></a></li>
+                <li><a href="exp2.html">2. Bus Schedule Table <span class="co-tag">CO1</span></a></li>
+                <li><a href="exp3.html">3. Event Registration Form <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp4.html">4. CSS Box Model & Styling <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp5.html">5. Bootstrap Landing Page <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp6.html">6. JS Arithmetic Calculators <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp7.html">7. JS DOM To-Do List <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp8.html">8. Form Regex Validation <span class="co-tag">CO2</span></a></li>
+                <li><a href="exp9.html">9. PHP Salary Slip Script <span class="co-tag">CO3</span></a></li>
+                <li><a href="exp10.html">10. PHP Session/Cookie Login <span class="co-tag">CO3</span></a></li>
+                <li><a href="exp11.html">11. PHP Profile Picture Upload <span class="co-tag">CO3</span></a></li>
+                <li><a href="exp12.html">12. PHP MySQL Connectivity <span class="co-tag">CO4</span></a></li>
+                <li><a href="exp13.html">13. PHP Student CRUD System <span class="co-tag">CO4</span></a></li>
+                <li><a href="exp14.html">14. AJAX Live Search <span class="co-tag">CO5</span></a></li>
+                <li><a href="exp15.html">15. jQuery Image Carousel <span class="co-tag">CO5</span></a></li>
+                <li><a href="exp16.html">16. PHP REST API (JSON) <span class="co-tag">CO5</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <h1>Web Programming Course Matrix</h1>
+        <p><strong>Subject Code: 3160713</strong> | AY 2025-26 Even [cite: 1, 3]</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.</th>
+                    <th>Objective of Experiment</th>
+                    <th>CO1</th>
+                    <th>CO2</th>
+                    <th>CO3</th>
+                    <th>CO4</th>
+                    <th>CO5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Semantic HTML5 Resume </td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bus Schedule (rowspan/colspan) </td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Registration Form (HTML5 Inputs) </td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Internal/External CSS Styling </td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bootstrap Landing Page </td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>JS EMI & Arithmetic Calculator </td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>JS DOM To-Do List </td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Regex Form Validation </td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>PHP Salary Slip Script </td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Login System (Sessions/Cookies) </td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Profile Picture Upload Logic </td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>PHP MySQL Database Insert </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Student Information (CRUD) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>AJAX Live Search Feature </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>jQuery Responsive Carousel </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>PHP REST API (JSON) </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tick">√</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+
+</html>

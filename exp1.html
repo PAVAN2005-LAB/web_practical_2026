@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Pavan Kumar Yadav</title>
+    <style>
+        :root {
+            --main-blue: #003366;
+            --accent-orange: #d35400;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        /* Layout */
+        main {
+            background: white;
+            padding: 40px;
+            border-top: 10px solid var(--main-blue);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            color: var(--main-blue);
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-links {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border: 3px solid var(--main-blue);
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 22px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--main-blue);
+            border-bottom: 2px solid var(--main-blue);
+            display: inline-block;
+            padding-right: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .entry-sub {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .highlight {
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .skill-tag {
+            background: #eef2f7;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--main-blue);
+            border: 1px solid #d1d9e6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="header-text">
+                <h1>Pavan Kumar Yadav</h1>
+                <p style="font-size: 1.1rem; color: #555; margin: 5px 0;">Data Science & Computer Engineering |
+                    Full-Stack Developer</p>
+                <div class="contact-links">
+                    <span>📍 Jamnagar, Gujarat</span> | <span>📞 +91-8866278406</span><br>
+                    <a href="mailto:230180107045@gecdahod.ac.in">230180107045@gecdahod.ac.in</a>
+                    <a href="https://linkedin.com/in/pavan-kumar-yadav-634904363/">LinkedIn</a>
+                    <a href="https://github.com/PAVAN2005-LAB">GitHub</a>
+                </div>
+            </div>
+            <img src="pavan.jpg" alt="Pavan Kumar Yadav" class="profile-photo">
+        </header>
+
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Technical problem solver with a <span class="highlight">Global Rank of 740 in TCS CodeVita 13(Top
+                    0.15%)</span>. Specialized in building automated LLM-driven pipelines and scalable web applications.
+                Currently pursuing dual degrees from <span class="bold">IIT Madras</span> and <span class="bold">GEC
+                    Dahod</span>.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Virtual Internships</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Web Application Development Intern | IBM SkillsBuild</span>
+                    <span>Jun 2024 – Aug 2024</span>
+                </div>
+                <ul>
+                    <li>Developed full-stack features using <strong>Python, FastAPI, and JavaScript</strong>.</li>
+                    <li>Implemented RESTful APIs and optimized backend logic, reducing query response times by 20%.</li>
+                    <li>Managed project versions and team collaboration using <strong>Git/GitHub</strong>.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Data Analyst Intern | IBM SkillsBuild & CSRBOX</span>
+                    <span>Jun 2024 – Aug 2024</span>
+                </div>
+                <ul>
+                    <li>Performed Exploratory Data Analysis (EDA) and cleaning on social impact datasets.</li>
+                    <li>Built interactive visual reports using <strong>Power BI</strong> and Advanced Excel.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Indian Institute of Technology, Madras (IITM)</span>
+                    <span>2024 – Present</span>
+                </div>
+                <div class="entry-sub">B.S. in Data Science and Applications | GPA: 8.20 / 10.0</div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Government Engineering College, Dahod</span>
+                    <span>2023 – Present</span>
+                </div>
+                <div class="entry-sub">B.E. in Computer Engineering | GPA: 8.48 / 10.0</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Web Programming & Data Projects</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>LLM App Builder (TDS_P1)</span>
+                    <span>Python / FastAPI / AI</span>
+                </div>
+                <p>An automated pipeline that uses <strong>Gemini API</strong> to generate web application code and
+                    deploys it automatically to GitHub Pages via the GitHub REST API.</p>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Building-Level Energy Analysis</span>
+                    <span>Data Science</span>
+                </div>
+                <p>Predictive model achieving <span class="highlight">98.9% accuracy</span> in forecasting electricity
+                    demand using XGBoost and advanced feature engineering.</p>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Matrix Calculator</span>
+                    <span>JavaScript / UI</span>
+                </div>
+                <p>A web-based tool for matrix operations, demonstrating core web programming skills and UI/UX design.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Toolkit</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python (Pandas, Scikit)</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">JavaScript / HTML / CSS</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">GCP</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Power BI</span>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Key Achievements</h2>
+            <ul>
+                <li><strong>TCS CodeVita: 13</strong> Global Rank <span class="highlight">740</span> out of 500,000+
+                    competitors.</li>
+                <li><strong>TCS CodeVita: 12</strong> Global Rank <span class="highlight">4918</span> out of 500,000+
+                    competitors.</li>
+                <li><strong>Problem Solving:</strong> 200+ problems solved on LeetCode/Codeforces.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: #888;">
+        <p>References available upon request. Built with Semantic HTML5.</p>
+    </footer>
+
+</body>
+
+</html>
