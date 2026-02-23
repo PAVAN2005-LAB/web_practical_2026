@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Student Registration Form</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+    <h3 style="margin-bottom: 20px;">Student Registration Form</h3>
+
+    <form action="#" method="post" style="width: 400px;">
+
+        <!-- Basic Information Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Basic Information</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="fullName" style="display: block; font-size: 14px; margin-bottom: 5px;">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" pattern="[A-Za-z ]+"
+                    required style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="enrollmentNo" style="display: block; font-size: 14px; margin-bottom: 5px;">Enrollment
+                    No:</label>
+                <input type="text" id="enrollmentNo" name="enrollmentNo" placeholder="230180107045" pattern="[0-9]{12}"
+                    required style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="email" style="display: block; font-size: 14px; margin-bottom: 5px;">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="example@gecdahod.ac.in"
+                    pattern="[a-z0-9._%+\-]+@gecdahod\.ac\.in"
+                    title="Please enter a valid @gecdahod.ac.in email address" required
+                    style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="mobileNo" style="display: block; font-size: 14px; margin-bottom: 5px;">Mobile No:</label>
+                <input type="tel" id="mobileNo" name="mobileNo" placeholder="10 digit number" pattern="[0-9]{10}"
+                    required style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="dob" style="display: block; font-size: 14px; margin-bottom: 5px;">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" style="padding: 4px; border: 1px solid #aaa;">
+            </div>
+        </fieldset>
+
+        <!-- Academic Details Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Academic Details</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="branch" style="display: block; font-size: 14px; margin-bottom: 5px;">Branch:</label>
+                <select id="branch" name="branch" style="padding: 4px; border: 1px solid #aaa;">
+                    <option value="">-- Select Branch --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ee">Electrical Engineering</option>
+                    <option value="ec">Electronics and Communication Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="ce">Civil Engineering</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="semester" style="display: block; font-size: 14px; margin-bottom: 5px;">Semester:</label>
+                <input type="number" id="semester" name="semester" min="1" max="8" required
+                    style="width: 50px; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label style="display: block; font-size: 14px; margin-bottom: 5px;">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="font-size: 14px; margin-right: 10px;">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="font-size: 14px; margin-right: 10px;">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" style="font-size: 14px;">Other</label>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label style="display: block; font-size: 14px; margin-bottom: 5px;">Skills:</label>
+                <input type="checkbox" id="html" name="skills" value="html">
+                <label for="html" style="font-size: 14px; margin-right: 10px;">HTML</label>
+
+                <input type="checkbox" id="css" name="skills" value="css">
+                <label for="css" style="font-size: 14px; margin-right: 10px;">CSS</label>
+
+                <input type="checkbox" id="js" name="skills" value="js">
+                <label for="js" style="font-size: 14px; margin-right: 10px;">JavaScript</label>
+
+                <input type="checkbox" id="php" name="skills" value="php">
+                <label for="php" style="font-size: 14px;">PHP</label>
+            </div>
+        </fieldset>
+
+        <!-- Other Details Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Other Details</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="address" style="display: block; font-size: 14px; margin-bottom: 5px;">Address:</label>
+                <textarea id="address" name="address" rows="3" placeholder="enter your address"
+                    style="width: 90%; padding: 4px; border: 1px solid #aaa;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="uploadPhoto" style="display: block; font-size: 14px; margin-bottom: 5px;">Upload
+                    Photo:</label>
+                <input type="file" id="uploadPhoto" name="uploadPhoto" style="font-size: 12px;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="password" style="display: block; font-size: 14px; margin-bottom: 5px;">Create
+                    Password:</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 6 characters"
+                    pattern="[a-zA-Z]" style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-top: 15px;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="font-size: 14px;">I agree to the <a
+                        href="https://pavan2005-lab.github.io/web_practical_2026/#">Terms &
+                        Conditions</a></label>
+            </div>
+        </fieldset>
+
+        <div style="margin-top: 10px;">
+            <button type="submit"
+                style="padding: 5px 15px; border: 1px solid #aaa; background-color: #f0f0f0; cursor: pointer; margin-right: 5px;">Submit</button>
+            <button type="reset"
+                style="padding: 5px 15px; border: 1px solid #aaa; background-color: #f0f0f0; cursor: pointer;">Reset</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
