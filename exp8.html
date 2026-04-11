@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form Validation (Exp 8)</title>
+    <style>
+        .error-msg {
+            color: red;
+            font-size: 12px;
+            display: block;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+    <h3 style="margin-bottom: 20px;">Student Registration Form (Exp 8 - With JS Validation)</h3>
+
+    <!-- 'return validateForm()' stops the submission if validation fails -->
+    <form action="#" method="post" style="width: 400px;" onsubmit="return validateForm()">
+
+        <!-- Basic Information Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Basic Information</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="fullName" style="display: block; font-size: 14px; margin-bottom: 5px;">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="enrollmentNo" style="display: block; font-size: 14px; margin-bottom: 5px;">Enrollment No:</label>
+                <input type="text" id="enrollmentNo" name="enrollmentNo" placeholder="230180107045" required style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="email" style="display: block; font-size: 14px; margin-bottom: 5px;">Email ID:</label>
+                <input type="text" id="email" name="email" placeholder="example@gecdahod.ac.in" style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+                <!-- Error Message span for Email -->
+                <span id="emailError" class="error-msg"></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="mobileNo" style="display: block; font-size: 14px; margin-bottom: 5px;">Mobile No:</label>
+                <input type="text" id="mobileNo" name="mobileNo" placeholder="10 digit number" style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+                <!-- Error Message span for Mobile -->
+                <span id="mobileError" class="error-msg"></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="dob" style="display: block; font-size: 14px; margin-bottom: 5px;">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" style="padding: 4px; border: 1px solid #aaa;">
+            </div>
+        </fieldset>
+
+        <!-- Academic Details Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Academic Details</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="branch" style="display: block; font-size: 14px; margin-bottom: 5px;">Branch:</label>
+                <select id="branch" name="branch" style="padding: 4px; border: 1px solid #aaa;">
+                    <option value="">-- Select Branch --</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="semester" style="display: block; font-size: 14px; margin-bottom: 5px;">Semester:</label>
+                <input type="number" id="semester" name="semester" min="1" max="8" style="width: 50px; padding: 4px; border: 1px solid #aaa;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label style="display: block; font-size: 14px; margin-bottom: 5px;">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </div>
+        </fieldset>
+
+        <!-- Other Details Section -->
+        <fieldset style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px;">
+            <legend style="color: #666; font-size: 14px;">Other Details</legend>
+
+            <div style="margin-bottom: 10px;">
+                <label for="password" style="display: block; font-size: 14px; margin-bottom: 5px;">Create Password:</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 6 characters" style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+                <!-- Error Message span for Password -->
+                <span id="passwordError" class="error-msg"></span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="confirmPassword" style="display: block; font-size: 14px; margin-bottom: 5px;">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" style="width: 90%; padding: 4px; border: 1px solid #aaa;">
+            </div>
+        </fieldset>
+
+        <div style="margin-top: 10px;">
+            <button type="submit" style="padding: 5px 15px; border: 1px solid #aaa; background-color: #f0f0f0; cursor: pointer; margin-right: 5px;">Submit</button>
+            <button type="reset" style="padding: 5px 15px; border: 1px solid #aaa; background-color: #f0f0f0; cursor: pointer;">Reset</button>
+        </div>
+
+    </form>
+
+    <script src="exp8.js"></script>
+</body>
+
+</html>
