@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exp 14 - AJAX Live Search</title>
+</head>
+<body>
+
+    <h2>AJAX Live Search (Exp 14)</h2>
+    <p>Type a student's name. Data will be fetched from MySQL instantly without reloading the page.</p>
+
+    <!-- The onkeyup event triggers the JavaScript function every time you press a key -->
+    Search Student Name: 
+    <input type="text" id="searchBox" onkeyup="liveSearch()">
+    
+    <br><br>
+    <hr>
+    
+    <h3>Search Results:</h3>
+    <!-- The JavaScript will grab database results and inject them inside this DIV -->
+    <div id="results">
+        <i>Results will appear here...</i>
+    </div>
+
+    <script>
+    // Traditional AJAX implementation
+    function liveSearch() {
+        
+        // 1. Get the text currently inside the input box
+        var inputString = document.getElementById("searchBox").value;
+        
+        // 2. If the user clears the box, empty the results div to hide old searches
+        if (inputString.length == 0) {
+            document.getElementById("results").innerHTML = "<i>Results will appear here...</i>";
+            return;
+        }
+        
+        // 3. Create the 'XMLHttpRequest' object (The heart of AJAX)
+        var xmlhttp = new XMLHttpRequest();
+        
+        // 4. Define what AJAX should do when it finally receives an answer from PHP
+        xmlhttp.onreadystatechange = function() {
+            // readyState 4 means 'Request Finished' and status 200 means 'OK'
+            if (this.readyState == 4 && this.status == 200) {
+                // Take the PHP answer and print it into the div
+                document.getElementById("results").innerHTML = this.responseText;
+            }
+        };
+        
+        // 5. Open connection to our backend PHP file, appending the typed word into the URL
+        xmlhttp.open("GET", "exp14_backend.php?query=" + inputString, true);
+        
+        // 6. Send the request
+        xmlhttp.send();
+    }
+    </script>
+
+</body>
+</html>
