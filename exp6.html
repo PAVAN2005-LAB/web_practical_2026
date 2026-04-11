@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculators</title>
+    <link rel="stylesheet" href="exp6.css">
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+    
+    <label>Enter First Number:</label>
+    <input type="number" id="num1"><br><br>
+    
+    <label>Enter Second Number:</label>
+    <input type="number" id="num2"><br><br>
+    
+    <button onclick="add()">Add (+)</button>
+    <button onclick="subtract()">Subtract (-)</button>
+    <button onclick="multiply()">Multiply (*)</button>
+    <button onclick="divide()">Divide (/)</button>
+    <br><br>
+    <h3 id="calc-result">Result: </h3>
+    
+    <br>
+    <hr>
+    <br>
+
+    <h1>EMI Calculator</h1>
+    
+    <label>Principal Amount (P):</label>
+    <input type="number" id="principal"><br><br>
+    
+    <label>Yearly Interest Rate (%):</label>
+    <input type="number" id="rate"><br><br>
+    
+    <label>Tenure (in Months):</label>
+    <input type="number" id="tenure"><br><br>
+    
+    <button onclick="calculateEMI()">Calculate EMI</button>
+    <br><br>
+    <h3 id="emi-result">EMI: </h3>
+
+    <script src="exp6.js"></script>
+</body>
+</html>
