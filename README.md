@@ -25,3 +25,5 @@ This project is automatically deployed to GitHub Pages via GitHub Actions.
   - [Exp 12: Database Registration Insertion (MySQL)](exp12.php)
   - [Exp 13: Student Info Management System (PHP/MySQL)](exp13.php)
   - [Exp 14: AJAX Live Search with Database](exp14.html)
+  - [Exp 15: jQuery Image Carousel Slider](exp15.html)
+  - [Exp 16: PHP REST API JSON Compilation](exp16.html)

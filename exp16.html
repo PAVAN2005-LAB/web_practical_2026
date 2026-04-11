@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exp 16 - REST API Consumer</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+
+    <h2>Consume REST API using Browser Client (Exp 16)</h2>
+    <p>This is the front-end page that requests data from our `exp16_api.php` backend.</p>
+    
+    <button onclick="callAPI()" style="padding: 10px; cursor: pointer;">Execute GET Request</button>
+    
+    <br><br>
+    
+    <h3>Raw JSON Response Output:</h3>
+    <!-- The white-space: pre-wrap CSS preserves the JSON block format so it looks exactly like Postman output! -->
+    <div id="api-response" style="background:#f4f4f4; padding:15px; border:1px solid #ccc; width: 600px; min-height: 100px; white-space: pre-wrap; font-family: monospace;">
+Waiting for request...
+    </div>
+
+    <script>
+    function callAPI() {
+        // We use the modern 'fetch()' browser API to place the GET Request to our specific file
+        fetch('exp16_api.php')
+            .then(function(response) {
+                // Ensure the response is digested strictly as a JSON object
+                return response.json();
+            })
+            .then(function(data) {
+                // Formatting the JSON object into a visually spaced string (4 spaces) 
+                var formattedJSON = JSON.stringify(data, null, 4);
+                
+                // Print the raw formatted code onto the screen
+                document.getElementById('api-response').innerHTML = formattedJSON;
+            })
+            .catch(function(error) {
+                // Error catching code if the PHP file crashed
+                document.getElementById('api-response').innerHTML = "ERROR: Could not fetch API. \n" + error;
+            });
+    }
+    </script>
+
+</body>
+</html>
