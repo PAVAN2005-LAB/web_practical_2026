@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exp 9 - Salary Slip Generator Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+
+    <h2>Experiment 9: Salary Entry Form</h2>
+    
+    <!-- Submit form to the PHP processing file -->
+    <form action="exp9.php" method="post" style="width: 300px; padding: 15px; border: 1px solid #aaa;">
+        
+        <label>Employee Name:</label><br>
+        <input type="text" name="emp_name" required style="width: 90%; padding: 4px; margin-top: 5px; margin-bottom: 10px;"><br>
+        
+        <label>Basic Pay (₹):</label><br>
+        <input type="number" name="basic_pay" required min="0" style="width: 90%; padding: 4px; margin-top: 5px; margin-bottom: 10px;"><br>
+        
+        <label>DA (% of Basic):</label><br>
+        <input type="number" name="da_percent" placeholder="e.g. 10" required min="0" style="width: 90%; padding: 4px; margin-top: 5px; margin-bottom: 10px;"><br>
+        
+        <label>HRA (% of Basic):</label><br>
+        <input type="number" name="hra_percent" placeholder="e.g. 15" required min="0" style="width: 90%; padding: 4px; margin-top: 5px; margin-bottom: 10px;"><br>
+        
+        <button type="submit" style="padding: 5px 15px; cursor: pointer; background-color: #f0f0f0; border: 1px solid #777;">Generate Salary Slip</button>
+    
+    </form>
+
+</body>
+</html>
