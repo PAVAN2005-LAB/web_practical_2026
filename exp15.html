@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Exp 15 - jQuery Carousel</title>
-    
+
     <!-- Step 1: Import the jQuery Library (Required for $ symbol to work) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-        
+
         /* Step 2: Make the carousel responsive and hide overflowing parts */
         .carousel-box {
             width: 80%;
             max-width: 800px;
-            margin: 20px auto; /* Centers the box */
+            margin: 20px auto;
+            /* Centers the box */
             position: relative;
-            overflow: hidden; /* Important: Hides the other images from the screen */
+            overflow: hidden;
+            /* Important: Hides the other images from the screen */
             border: 2px solid #555;
         }
 
         /* Step 3: Put images side-by-side inside an extra long box */
         .slides {
             display: flex;
-            width: 300%; /* Because there are 3 images (100% * 3) */
+            width: 300%;
+            /* Because there are 3 images (100% * 3) */
             margin: 0;
             padding: 0;
             list-style: none;
             /* This is the CSS property jQuery will manipulate for sliding animations */
-            transition: transform 0.5s ease-in-out; 
+            transition: transform 0.5s ease-in-out;
         }
 
         .slides li {
-            width: 33.333%; /* 100% total slide width divided by 3 images */
+            width: 33.333%;
+            /* 100% total slide width divided by 3 images */
         }
 
         .slides img {
@@ -55,26 +60,31 @@
         }
 
         /* Absolute positioning for left and right buttons */
-        #prevBtn { left: 0; }
-        #nextBtn { right: 0; }
-        
+        #prevBtn {
+            left: 0;
+        }
+
+        #nextBtn {
+            right: 0;
+        }
     </style>
 </head>
+
 <body>
 
-    <h2>Responsive jQuery Image Slider (Exp 15)</h2>
-    <p>This carousel transitions automatically every 3 seconds using setInterval().</p>
+    <h2>Responsive jQuery Image Slider</h2>
+
 
     <!-- The physical container -->
     <div class="carousel-box">
-        
+
         <!-- The list of images -->
         <ul class="slides">
             <li><img src="https://picsum.photos/id/1018/800/400" alt="Nature 1"></li>
             <li><img src="https://picsum.photos/id/1015/800/400" alt="Nature 2"></li>
             <li><img src="https://picsum.photos/id/1019/800/400" alt="Nature 3"></li>
         </ul>
-        
+
         <!-- The manual navigation buttons -->
         <button id="prevBtn" class="nav-btn"> Previous </button>
         <button id="nextBtn" class="nav-btn"> Next </button>
@@ -83,58 +93,59 @@
 
     <!-- The jQuery Logic Script -->
     <script>
-    // Make sure HTML is loaded before running script
-    $(document).ready(function(){
-        
-        var currentIndex = 0;       // Keeps track of what image we are on
-        var imageCount = 3;         // Total number of images
-        var slideWidth = 33.333;    // Percentage out of 100 we need to move (100 / 3)
-        var autoTimer;              // The interval variable
-        
-        // This function handles the physical animation of the slides
-        function showSlide(index) {
-            
-            // Loop logic to control boundaries
-            if (index < 0) {
-                currentIndex = imageCount - 1; // Go to last image if pressing previous on first
-            } else if (index >= imageCount) {
-                currentIndex = 0;              // Go to first image if pressing next on last
-            } else {
-                currentIndex = index;          // Standard progression
+        // Make sure HTML is loaded before running script
+        $(document).ready(function () {
+
+            var currentIndex = 0;       // Keeps track of what image we are on
+            var imageCount = 3;         // Total number of images
+            var slideWidth = 33.333;    // Percentage out of 100 we need to move (100 / 3)
+            var autoTimer;              // The interval variable
+
+            // This function handles the physical animation of the slides
+            function showSlide(index) {
+
+                // Loop logic to control boundaries
+                if (index < 0) {
+                    currentIndex = imageCount - 1; // Go to last image if pressing previous on first
+                } else if (index >= imageCount) {
+                    currentIndex = 0;              // Go to first image if pressing next on last
+                } else {
+                    currentIndex = index;          // Standard progression
+                }
+
+                // Math equation to know how far to slide the ul block (-0%, -33.33%, -66.66%)
+                var shiftPercent = -(currentIndex * slideWidth) + "%";
+
+                // Execute the jQuery CSS switch
+                $(".slides").css("transform", "translateX(" + shiftPercent + ")");
             }
-            
-            // Math equation to know how far to slide the ul block (-0%, -33.33%, -66.66%)
-            var shiftPercent = -(currentIndex * slideWidth) + "%";
-            
-            // Execute the jQuery CSS switch
-            $(".slides").css("transform", "translateX(" + shiftPercent + ")");
-        }
 
-        // Timer function to transition every 3 seconds (3000 ms)
-        function startCarousel() {
-            autoTimer = setInterval(function() {
-                showSlide(currentIndex + 1); // Continually try to show the next slide
-            }, 3000);
-        }
-        
-        // Start the carousel immediately upon loading
-        startCarousel();
+            // Timer function to transition every 3 seconds (3000 ms)
+            function startCarousel() {
+                autoTimer = setInterval(function () {
+                    showSlide(currentIndex + 1); // Continually try to show the next slide
+                }, 3000);
+            }
 
-        // What happens when the user clicks the "Next" button
-        $("#nextBtn").click(function() {
-            clearInterval(autoTimer); // Stop automatic rolling
-            showSlide(currentIndex + 1);
-            startCarousel(); // Restart automatic rolling
-        });
-
-        // What happens when the user clicks the "Previous" button
-        $("#prevBtn").click(function() {
-            clearInterval(autoTimer);
-            showSlide(currentIndex - 1);
+            // Start the carousel immediately upon loading
             startCarousel();
+
+            // What happens when the user clicks the "Next" button
+            $("#nextBtn").click(function () {
+                clearInterval(autoTimer); // Stop automatic rolling
+                showSlide(currentIndex + 1);
+                startCarousel(); // Restart automatic rolling
+            });
+
+            // What happens when the user clicks the "Previous" button
+            $("#prevBtn").click(function () {
+                clearInterval(autoTimer);
+                showSlide(currentIndex - 1);
+                startCarousel();
+            });
+
         });
-        
-    });
     </script>
 </body>
+
 </html>
