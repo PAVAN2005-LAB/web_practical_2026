@@ -8,6 +8,8 @@ This repository contains the practical experiments for the Web Programming cours
 
 ## Deployment
 This project is automatically deployed to GitHub Pages via GitHub Actions.
+It is also fully hosted live on InfinityFree (including PHP/MySQL experiments) at: 
+**[http://pavan-yadav-sde.free.nf/](http://pavan-yadav-sde.free.nf/)**
 
 - **Main Dashboard**: [index.html](index.html)
 - **Experiments**:
